@@ -1,0 +1,36 @@
+@import url("style.css");
+
+.recomendation.product {
+  margin-top: 50px;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 10px;
+  }
+  
+  .pagination a {
+    color: #0d63f3; 
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 2px;
+    transition: background-color 0.3s, color 0.3s; 
+    background-color: #fff;
+  }
+  
+  .pagination a.active {
+    background-color: #0d63f3;
+    color: white;
+    border: 2px solid #0d63f3;
+  }
+  
+  .pagination a:hover:not(.active) {
+    background-color: #2f7af8;
+    color: white;
+  }
+
+
+  
