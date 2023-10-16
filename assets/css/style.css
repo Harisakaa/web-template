@@ -33,6 +33,7 @@ header {
   z-index: 2;
 }
 
+
 .navbar-wrapper {
   max-width: 1398px;
   margin: 0 auto;
@@ -500,8 +501,14 @@ footer {
 
 /*  Media queries*/
 @media screen and (width: 1366px) {
+
+  .navbar {
+    padding: 18px;
+  }
+
   .swiper {
     width: 1300px;
+
   }
 
   .title {
@@ -510,10 +517,18 @@ footer {
   }
 
   .categories {
-    padding: 40px 30px;
+    padding: 20px 10px;
+    max-width: 1300px;
   }
   .recomendation {
-    padding: 0 30px 0;
+    padding: 0 20px 0;
+    max-width: 1300px;
+  }
+
+  .recomendation-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, auto));
+    gap: 1rem;
   }
 
   .brand {
@@ -647,6 +662,8 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+
+  
   .hero-slider {
     padding-top: 80px;
   }
