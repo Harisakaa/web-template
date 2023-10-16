@@ -33,4 +33,12 @@
   }
 
 
+  @media screen and (width:1366px) {
+    .recomendation.product {
+      margin-top: 150px;
+    }
+    
+  }
+
+
   

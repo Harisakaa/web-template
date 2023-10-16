@@ -1,28 +1,19 @@
 
+function tampil() {
+  const elemenTampilkan = document.querySelectorAll('.top, .left, .right, .bottom');
+  let tinggiJendela = window.innerHeight;
+  let titikMuncul = 100;
 
-window.addEventListener('scroll', reveal);
-reveal();
+  for (let i = 0; i < elemenTampilkan.length; i++) {
+    const titikAtas = elemenTampilkan[i].getBoundingClientRect().top;
 
-function reveal() {
-  var reveals = document.querySelectorAll('.reveal, .left, .right, .bottom');
-  var windowheight = window.innerHeight;
-  var revealpoint = 100;
-
-  for (var i = 0; i < reveals.length; i++) {
-    var revealtop = reveals[i].getBoundingClientRect().top;
-
-    if (revealtop < windowheight - revealpoint) {
-      reveals[i].classList.add('active');
+    if (titikAtas < tinggiJendela - titikMuncul) {
+      elemenTampilkan[i].classList.add('active');
     } else {
-      reveals[i].classList.remove('active');
+      elemenTampilkan[i].classList.remove('active');
     }
   }
 }
 
-
-const modal = document.getElementById('id01');
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+window.addEventListener('scroll', tampil);
+tampil();
