@@ -17,3 +17,4 @@ function tampil() {
 
 window.addEventListener('scroll', tampil);
 tampil();
+
